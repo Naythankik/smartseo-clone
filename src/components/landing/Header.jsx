@@ -70,7 +70,7 @@ const Header = () => {
             {/*The modal for search display*/}
             <div
                 className={
-                    `transition-all duration-700 ease-in-out bg-[#111922] md:h-[52vh] absolute justify-between top-0 w-full left-0 items-center py-16 flex-col ${search ? 'translate-y-0 pointer-events-auto flex' : 'hidden -translate-y-full pointer-events-none'}`
+                    `transition-all duration-700 ease-in-out bg-[#111922] h-[58vh] md:h-[52vh] z-50 fixed justify-between top-0 w-full left-0 items-center py-8 flex-col ${search ? 'translate-y-0 pointer-events-auto flex' : 'hidden -translate-y-full pointer-events-none'}`
                 }>
                 <div className=" flex justify-between w-[88%] items-center">
                     <img src={HomeIcon} alt="Home icon" className="w-48"/>
@@ -89,7 +89,7 @@ const Header = () => {
             {/*The Modal for hamburger menu*/}
             <div
                 className={
-                    `transition-all duration-700 ease-in-out bg-[#111922] min-h-screen z-50 absolute gap-12 top-0 w-full left-0 items-center py-8 flex-col ${menu ? 'translate-y-0 pointer-events-auto flex' : 'hidden -translate-y-full pointer-events-none'}`
+                    `transition-all duration-700 ease-in-out bg-[#111922] min-h-screen z-50 fixed gap-12 top-0 w-full left-0 items-center py-8 flex-col ${menu ? 'translate-y-0 pointer-events-auto flex' : 'hidden -translate-y-full pointer-events-none'}`
                 }>
                 <div className=" flex justify-between w-[88%] items-center">
                     <img src={HomeIcon} alt="Home icon" className="w-28"/>
