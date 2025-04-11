@@ -13,7 +13,7 @@ const Header = () => {
         <header className="bg-transparent w-full flex justify-between items-center p-5 md:px-12 relative">
             <div className="flex gap-16 items-center justify-between md:justify-center w-full md:w-auto">
                 <Link to="/">
-                    <img src={HomeIcon} alt="Home icon"/>
+                    <img src={HomeIcon} alt="Home icon" className="w-28 md:w-auto"/>
                 </Link>
                 <nav className="text-white font-semibold text-base md:text-lg">
                     <ul className="hidden md:flex gap-10 items-center">
