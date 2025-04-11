@@ -107,8 +107,8 @@ const ArticleArticles = ({ title, description, date, comments, image }) => {
             )}
             <div className="p-2 md:p-4 lg:p-6">
                 <h3 className="text-base md:text-xl font-bold text-gray-800 mb-2 uppercase">{title}</h3>
-                <p className="text-gray-900 text-base md:text-2xl font-bold mb-2 md:mb-4">{description}</p>
-                <ul className="flex gap-8 items-center text-base text-gray-400">
+                <p className="text-gray-900 text-sm md:text-2xl font-bold mb-2 md:mb-4">{description}</p>
+                <ul className="flex gap-6 md:gap-8 items-center text-xs md:text-base text-gray-400">
                     <li>{date}</li>
                     <li className="list-disc">{comments} comments</li>
                 </ul>
