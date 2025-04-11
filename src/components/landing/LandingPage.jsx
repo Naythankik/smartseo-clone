@@ -80,16 +80,13 @@ const SideLinks = ({ title, icon: Icon }) => {
 
 const RandomList = ({ id, title, value}) => {
     return (
-        <div className="cursor-text gap-4 flex">
-            <div className="relative">
-                <p className="text-[10rem] font-extrabold text-red-400">{value}</p>
+        <div className={`cursor-text gap-4 flex justify-center w-full ${ id % 2 ? 'border-r md:border-0' : 'border-0'} ${ id !== 1 ? 'md:border-l' : 'md:border-0'} border-gray-200`}>
+            <div className="relative w-fit">
+                <p className="text-[5rem] md:text-[10rem] font-extrabold text-red-400">{value}</p>
                 <span
-                    className="text-2xl text-gray-900 font-bold absolute top-0 bottom-0 left-0 right-0 grid place-items-center">{title}
-            </span>
+                    className="text-base md:text-2xl text-gray-900 font-bold absolute top-0 bottom-0 left-0 right-0 grid place-items-center">{title}
+                </span>
             </div>
-            <hr dir="vertical" className={
-                `${id !== 4 ? 'flex' : 'hidden'} border w-full h-[70px] flex items-center my-auto border-gray-200 ml-32`
-            }/>
         </div>
     );
 }
@@ -198,7 +195,7 @@ const LandingPage = () => {
             </section>
 
             {/*The second section*/}
-            <section className="hidden px-20 mt-[16rem] w-full md:w-[82%] mx-auto justify-between items-center">
+            <section className="grid grid-cols-[1fr_1fr] md:grid-cols-4 gap-3 px-0 md:px-16 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
                 {
                     lists.map((item, index) => (
                         <RandomList key={index} id={item.id} title={item.title} value={item.value}/>
