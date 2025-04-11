@@ -136,23 +136,23 @@ const LandingPage = () => {
                 <button className="bg-white px-5 py-2 rounded-xl text-xl">Presale Chat</button>
             </div>
 
-            <section className="hidden flex-col h-auto bg-fixed md:h-[85vh]"
+            <section className="flex flex-col h-auto md:h-[85vh]"
                      style={{
                          backgroundImage: `url(${LandingImage})`,
                          backgroundSize: 'cover'
                      }}
             >
                 <Header/>
-                <div className="flex flex-col items-center my-12 h-full justify-evenly">
-                    <p className="capitalize text-6xl text-white w-2/5 text-center font-extrabold ">
+                <div className="flex flex-col items-center my-12 gap-6 md:gap-0 h-full justify-evenly">
+                    <p className="capitalize text-3xl md:text-4xl lg:text-6xl text-white w-full md:w-2/5 text-center font-extrabold">
                         turning creative ideas into success
                     </p>
-                    <p className="text-white w-2/6 font-semibold text-center text-xl">
+                    <p className="text-white w-[80%] md:w-2/6 font-semibold text-center text-base md:text-xl">
                         Consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua quis nostrud
                         exerc.
                     </p>
                     <Link to="#"
-                          className="rounded-3xl text-white bg-cyan-400 py-4 w-fit px-12 font-semibold text-center">Discover
+                          className="rounded-3xl text-white bg-cyan-400 py-2 md:py-4 w-fit px-6 md:px-12 font-semibold text-center">Discover
                         Now</Link>
                 </div>
 
