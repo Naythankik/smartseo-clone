@@ -66,13 +66,13 @@ const SideLinks = ({ title, icon: Icon }) => {
     return (
         <Link
             to="#"
-            className="group text-white bg-blue-950 flex items-center w-fit min-h-16"
+            className="group text-white bg-blue-950 flex items-center w-fit min-h-10 md:min-h-16"
         >
-            <span className="hidden group-hover:flex bg-cyan-950 py-6 px-4 w-full text-nowrap uppercase font-semibold text-xs transition-all duration-300">
+            <span className="hidden group-hover:flex bg-cyan-950 py-4 md:py-6 px-3 md:px-4 w-full text-nowrap uppercase font-semibold text-xs transition-all duration-300">
                 {title}
             </span>
-            <span className="flex justify-center w-full px-6 group-hover:px-7 transition-all duration-300">
-                <Icon className="text-3xl font-extralight" />
+            <span className="flex justify-center w-full px-3 md:px-6 group-hover:px-4 md:group-hover:px-7 transition-all duration-300">
+                <Icon className="text-base md:text-2xl lg:text-3xl font-extralight" />
             </span>
         </Link>
     );
@@ -121,19 +121,19 @@ const ArticleArticles = ({ title, description, date, comments, image }) => {
 const LandingPage = () => {
     return (
         <div className="min-h-screen">
-            <div className="fixed top-1/3 right-0 hidden flex-col gap-0.5 items-end">
+            <div className="fixed top-1/3 right-0 flex flex-col gap-0.5 items-end z-50">
                 <SideLinks title="Buy Theme" icon={FaCartShopping}/>
                 <SideLinks title="Our bestsellers" icon={FaImage}/>
                 <SideLinks title="Hide panel" icon={FaWallet}/>
 
             </div>
 
-            <div className="hidden fixed left-10 bottom-24 gap-4 z-50 items-center">
+            <div className="fixed left-10 bottom-24 gap-4 z-50 items-center">
                 <div
-                    className="[width:80px] [height:80px] flex justify-center items-center text-white text-3xl rounded-full bg-green-500">
-                    <FaMessage/>
+                    className="w-10 h-10 md:w-20 md:h-20 flex justify-center items-center text-white text-base md:text-3xl rounded-full bg-green-500">
+                    <FaMessage />
                 </div>
-                <button className="bg-white px-5 py-2 rounded-xl text-xl">Presale Chat</button>
+                <button className="bg-white px-3 md:px-5 py-2 rounded-xl text-base md:text-xl">Presale Chat</button>
             </div>
 
             <section className="flex flex-col h-auto md:h-[85vh]"

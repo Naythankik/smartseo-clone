@@ -10,7 +10,7 @@ const Header = () => {
     const [menu, setMenu] = useState(false);
 
     return (
-        <header className="bg-transparent w-full flex justify-between items-center p-8 md:px-12 relative">
+        <header className="bg-transparent w-full flex justify-between items-center p-5 md:px-12 relative">
             <div className="flex gap-16 items-center justify-between md:justify-center w-full md:w-auto">
                 <Link to="/">
                     <img src={HomeIcon} alt="Home icon"/>
