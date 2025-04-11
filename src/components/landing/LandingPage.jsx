@@ -229,15 +229,15 @@ const LandingPage = () => {
             </section>
 
             {/*The fifth section*/}
-            <section className="hidden px-20 my-16 w-full md:w-[85%] mx-auto justify-between">
-                <p className="text-5xl text-black font-bold w-[40%]">Subscribe for the exclusive updates!</p>
-                <form className="flex flex-col gap-3 items-start w-[58%]">
-                    <div className="flex gap-5 w-full">
+            <section className="flex flex-col md:flex-row px-0 md:px-16 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-3 md:gap-0 justify-between">
+                <p className="text-xl md:text-3xl lg:text-5xl text-black font-bold w-full md:w-[40%]">Subscribe for the exclusive updates!</p>
+                <form className="flex flex-col gap-1 md:gap-3 items-start w-full md:w-[58%]">
+                    <div className="flex gap-2 md:gap-5 w-full">
                         <input type="email"
                                placeholder="Enter Your Email Address"
-                               className="text-wrap focus:outline-0 flex items-center gap-2 w-full p-4 text-base font-semibold rounded-3xl"/>
+                               className="text-wrap focus:outline-0 flex items-center gap-2 w-full py-2 px-4 md:p-4 text-base font-semibold rounded-xl md:rounded-3xl"/>
                         <button type="submit"
-                                className="text-wrap flex items-center gap-2 py-4 w-2/5 justify-center text-white rounded-3xl bg-blue-700">
+                                className="text-wrap flex items-center gap-2 py-2 md:py-4 w-2/5 justify-center text-white rounded-xl md:rounded-3xl bg-blue-700">
                             <FaFaceAngry/>
                             Subscribe
                         </button>
@@ -246,7 +246,7 @@ const LandingPage = () => {
                         <input type="checkbox"/>
                         <label className="text-gray-800 text-sm">I agree to the
                             <Link to="#"
-                                  className="underline underline-offset-4">Privacy
+                                  className="underline underline-offset-4"> Privacy
                             Policy</Link>.
                         </label>
                     </div>
