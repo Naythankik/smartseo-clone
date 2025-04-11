@@ -271,10 +271,10 @@ const LandingPage = () => {
 
                 <div className="w-full md:w-3/6 relative h-full">
                     <div className="flex justify-end w-full">
-                        <img src={WomanDrinking} alt="woman drinking" className="w-2/4 md:w-auto"/>
+                        <img src={WomanDrinking} alt="woman drinking" className="w-2/3 md:w-auto"/>
                     </div>
                     <div className="flex w-full">
-                        <img src={Laptop} alt="laptop" className="-mt-96 ml-10 md:ml-28"/>
+                        <img src={Laptop} alt="laptop" className="-mt-80 ml-10 md:ml-28"/>
                     </div>
                 </div>
 
