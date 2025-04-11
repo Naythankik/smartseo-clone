@@ -207,22 +207,22 @@ const LandingPage = () => {
             </section>
 
             {/*The third section*/}
-            <section className="hidden px-20 my-16 w-full md:w-[85%] mx-auto justify-between h-60">
-                <div className="flex flex-col gap-4 w-2/5">
-                    <p className="text-lg text-black uppercase font-semibold tracking-widest">creative solutions</p>
-                    <p className="text-6xl text-black font-bold">We make unique & memorable brands</p>
+            <section className="flex flex-col md:flex-row md:px-20 gap-2 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between md:h-72">
+                <div className="flex flex-col gap-1 md:gap-4 w-full md:w-2/5">
+                    <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">creative solutions</p>
+                    <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">We make unique & memorable brands</p>
 
                 </div>
-                <div className="w-3/6 flex flex-col justify-end">
-                    <p className="text-lg text-gray-600 font-medium tracking-wide">
+                <div className="w-full md:w-3/6 flex flex-col justify-end gap-1 md:gap-3">
+                    <p className="text-base md:text-lg text-gray-600 font-medium tracking-wide">
                         At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
                         deleniti atque
                         lorem in voluptate velit iusto odio dignissimos duci esse.<br/><br/> Sed ut perspiciatis unde
                         omnis iste natus error sit
                         voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-                    </p><br/>
+                    </p>
                     <Link to="#"
-                          className="text-indigo-900 underline underline-offset-8 hover:no-underline font-semibold text-lg">Read
+                          className="text-indigo-900 underline underline-offset-4 md:underline-offset-8 hover:no-underline font-semibold text-base md:text-lg">Read
                         More</Link>
                 </div>
 
