@@ -22,7 +22,6 @@ import Sandy from "../../assets/sandy.jpg"
 import Paul from "../../assets/paul.jpg"
 
 import {
-    FaCaretLeft, FaCaretRight,
     FaCartShopping,
     FaFaceAngry,
     FaImage,
@@ -31,6 +30,7 @@ import {
     FaWallet
 } from "react-icons/fa6";
 import {SiFarfetch} from "react-icons/si";
+import TestimonialSlider from "../Slider.jsx";
 
 
 const lists = [
@@ -123,23 +123,6 @@ const ArticleArticles = ({ title, description, date, comments, image }) => {
                     <li>{date}</li>
                     <li className="list-disc">{comments} comments</li>
                 </ul>
-            </div>
-        </article>
-    );
-};
-
-const TestimonialArticles = ({ id, name, description, level, image }) => {
-    return (
-        <article id={id}
-                 className="min-w-full transition-shadow duration-300 flex gap-5 items-center flex-col text-center">
-            {image && (
-                <img src={image} alt={name} className="rounded-full w-[100px] h-[100px]" />
-            )}
-            <p className="capitalize text-blue-950 text-xl font-semibold w-3/5">{description}</p>
-            <span className="text-cyan-400 text-8xl font-extrabold h-12">''</span>
-            <div className="flex flex-col gap-2">
-                <span className="capitalize text-blue-950 text-2xl font-semibold">{name}</span>
-                <span className="capitalize text-gray-300 text-xl font-medium">{level}</span>
             </div>
         </article>
     );
@@ -261,26 +244,8 @@ const LandingPage = () => {
             </section>
 
             {/*The fourth section*/}
-            <section
-                className="relative flex flex-col px-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-1 md:gap-8 lg:gap-12 justify-center items-center">
 
-                <button className="bg-transparent border-2 border-gray-300 text-gray-600 w-12 h-12 rounded-full flex justify-center items-center text-2xl">
-                    <FaCaretLeft />
-                </button>
-
-                <div className="flex flex-nowrap overflow-x-scroll w-full bg-red-400 gap-6 px-6 py-4"
-                     style={{scrollbarWidth: 'none'}}>{
-                    testimonials.map((testimonial, index) => (
-                        <TestimonialArticles key={index} {...testimonial} />
-                    ))
-                }
-                </div>
-
-                <button className="bg-transparent border-2 border-gray-300 text-gray-600 w-12 h-12 rounded-full flex justify-center items-center text-2xl">
-                    <FaCaretRight/>
-                </button>
-
-            </section>
+            <TestimonialSlider testimonials={ testimonials } />
 
             {/*The fifth section*/}
             <section
