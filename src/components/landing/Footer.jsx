@@ -33,7 +33,7 @@ const Footer = () => {
     const year = new Date().getFullYear()
     return (
         <footer className="w-full bg-[#060E18] py-8">
-            <div className="flex flex-col gap-5 md:gap-6 w-[95%] md:w-[85%] mx-auto bg-transparent">
+            <div className="flex flex-col gap-5 md:gap-6 w-[90%] md:w-[85%] mx-auto bg-transparent">
 
                     <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] gap-4 md:gap-0 justify-between">
                         <div className="flex flex-col gap-3 md:gap-5">

@@ -104,13 +104,13 @@ const SponsorArticle = ({ icon: Icon, title }) => {
 
 const ArticleArticles = ({ title, description, date, comments, image }) => {
     return (
-        <article className="min-w-[35%] rounded-2xl transition-shadow duration-300">
+        <article className="min-w-[50%] md:min-w-[35%] rounded md:rounded-2xl transition-shadow duration-300">
             {Image && (
-                <img src={image} alt={title} className="w-full rounded-t-2xl"/>
+                <img src={image} alt={title} className="w-full rounded-t-xl md:rounded-t-2xl"/>
             )}
-            <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2 uppercase">{title}</h3>
-                <p className="text-gray-900 text-2xl font-bold mb-4">{description}</p>
+            <div className="p-2 md:p-4 lg:p-6">
+                <h3 className="text-base md:text-xl font-bold text-gray-800 mb-2 uppercase">{title}</h3>
+                <p className="text-gray-900 text-base md:text-2xl font-bold mb-2 md:mb-4">{description}</p>
                 <ul className="flex gap-8 items-center text-base text-gray-400">
                     <li>{date}</li>
                     <li className="list-disc">{comments} comments</li>
@@ -124,14 +124,14 @@ const ArticleArticles = ({ title, description, date, comments, image }) => {
 const LandingPage = () => {
     return (
         <div className="min-h-screen">
-            <div className="fixed top-1/3 right-0 flex flex-col gap-0.5 items-end">
+            <div className="fixed top-1/3 right-0 hidden flex-col gap-0.5 items-end">
                 <SideLinks title="Buy Theme" icon={FaCartShopping}/>
                 <SideLinks title="Our bestsellers" icon={FaImage}/>
                 <SideLinks title="Hide panel" icon={FaWallet}/>
 
             </div>
 
-            <div className="hidden fixed left-10 bottom-24 flex gap-4 z-50 items-center">
+            <div className="hidden fixed left-10 bottom-24 gap-4 z-50 items-center">
                 <div
                     className="[width:80px] [height:80px] flex justify-center items-center text-white text-3xl rounded-full bg-green-500">
                     <FaMessage/>
@@ -139,7 +139,7 @@ const LandingPage = () => {
                 <button className="bg-white px-5 py-2 rounded-xl text-xl">Presale Chat</button>
             </div>
 
-            <section className="flex flex-col h-auto bg-fixed md:h-[85vh]"
+            <section className="hidden flex-col h-auto bg-fixed md:h-[85vh]"
                      style={{
                          backgroundImage: `url(${LandingImage})`,
                          backgroundSize: 'cover'
@@ -162,7 +162,7 @@ const LandingPage = () => {
             </section>
 
             {/*The first section*/}
-            <section className="flex px-16 my-[16rem] w-full md:w-[85%] mx-auto justify-between items-center">
+            <section className="hidden px-16 my-[16rem] w-full md:w-[85%] mx-auto justify-between items-center">
                 <div className="w-3/6 relative h-full">
                     <div>
                         <img src={HeadPhone} alt="headphone icon"/>
@@ -198,7 +198,7 @@ const LandingPage = () => {
             </section>
 
             {/*The second section*/}
-            <section className="flex px-20 mt-[16rem] w-full md:w-[82%] mx-auto justify-between items-center">
+            <section className="hidden px-20 mt-[16rem] w-full md:w-[82%] mx-auto justify-between items-center">
                 {
                     lists.map((item, index) => (
                         <RandomList key={index} id={item.id} title={item.title} value={item.value}/>
@@ -207,7 +207,7 @@ const LandingPage = () => {
             </section>
 
             {/*The third section*/}
-            <section className="flex px-20 my-16 w-full md:w-[85%] mx-auto justify-between h-60">
+            <section className="hidden px-20 my-16 w-full md:w-[85%] mx-auto justify-between h-60">
                 <div className="flex flex-col gap-4 w-2/5">
                     <p className="text-lg text-black uppercase font-semibold tracking-widest">creative solutions</p>
                     <p className="text-6xl text-black font-bold">We make unique & memorable brands</p>
@@ -229,7 +229,7 @@ const LandingPage = () => {
             </section>
 
             {/*The fifth section*/}
-            <section className="flex px-20 my-16 w-full md:w-[85%] mx-auto justify-between">
+            <section className="hidden px-20 my-16 w-full md:w-[85%] mx-auto justify-between">
                 <p className="text-5xl text-black font-bold w-[40%]">Subscribe for the exclusive updates!</p>
                 <form className="flex flex-col gap-3 items-start w-[58%]">
                     <div className="flex gap-5 w-full">
@@ -254,8 +254,8 @@ const LandingPage = () => {
             </section>
 
             {/*The seventh section*/}
-            <section className="flex px-16 my-24 w-full md:w-[85%] mx-auto justify-between items-center">
-                <div className="flex flex-col gap-4 w-2/5">
+            <section className="hidden' px-16 my-24 w-full md:w-[85%] mx-auto justify-between items-center">
+                <div className="hidden flex-col gap-4 w-2/5">
                     <p className="text-lg text-black uppercase font-semibold tracking-widest">Who We Are</p>
                     <p className="text-6xl text-black font-bold">We provide best digital services</p>
                     <p className="text-base text-gray-600 font-medium tracking-wide">
@@ -267,7 +267,8 @@ const LandingPage = () => {
                         Now</Link>
 
                 </div>
-                <div className="w-3/6 relative h-full">
+                {/*When here, no display was set*/}
+                <div className="hidden w-3/6 relative h-full">
                     <div className="flex justify-end">
                         <img src={WomanDrinking} alt="woman drinking"/>
                     </div>
@@ -279,7 +280,7 @@ const LandingPage = () => {
             </section>
 
             {/*The eight section*/}
-            <section className="flex px-0 my-24 w-full md:w-[85%] mx-auto justify-between items-center">
+            <section className="hidden px-0 my-24 w-[95%] md:w-[85%] mx-auto justify-between items-center">
                 <SponsorArticle title="codan" icon={Codan}/>
                 <SponsorArticle title="wave" icon={Wave}/>
                 <SponsorArticle title="orca" icon={Orca}/>
@@ -289,9 +290,9 @@ const LandingPage = () => {
             </section>
 
             {/*The ninth section*/}
-            <section className="flex flex-col px-0 my-24 w-full md:w-[85%] mx-auto gap-12 justify-center items-center">
-                <p className="text-lg text-black uppercase font-semibold tracking-widest">Our blog</p>
-                <p className="text-6xl text-black font-bold">Latest articles</p>
+            <section className="flex flex-col px-0 my-8 md:my-24 w-[90%] md:w-[85%] mx-auto gap-1 md:gap-8 lg:gap-12 justify-center items-center">
+                <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">Our blog</p>
+                <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">Latest articles</p>
                 <div className="flex flex-nowrap overflow-x-scroll w-full gap-6 px-6 py-4" style={{scrollbarWidth: 'none'}}>{
                     articles.map((article, index) => (
                         <ArticleArticles key={index} {...article} />
