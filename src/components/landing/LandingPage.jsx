@@ -159,35 +159,37 @@ const LandingPage = () => {
             </section>
 
             {/*The first section*/}
-            <section className="hidden px-16 my-[16rem] w-full md:w-[85%] mx-auto justify-between items-center">
-                <div className="w-3/6 relative h-full">
-                    <div>
+            <section className="flex flex-col md:flex-row px-0 md:px-16 gap-8 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
+                <div className="w-full md:w-3/6 relative h-full">
+                    <div className="flex justify-start w-full">
                         <img src={HeadPhone} alt="headphone icon"/>
                     </div>
-                    <div className="flex justify-end">
-                        <img src={LaptopMan} alt="laptop man" className="absolute top-32 left-40"/>
+                    <div className="flex w-full">
+                        <img src={LaptopMan} alt="laptop man" className="-mt-60 ml-36 md:ml-40 w-2/3 md:w-auto"/>
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-4 w-2/5">
-                    <p className="text-lg text-black uppercase font-semibold tracking-widest">creative agency</p>
-                    <p className="text-6xl text-black font-bold">We help your business grow</p>
-                    <p className="text-base text-gray-600 font-medium tracking-wide">Dicta sunt explicabo. Nemo
-                        enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                <div className="flex flex-col gap-2 md:gap-4 w-full md:w-2/5">
+                    <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">creative agency</p>
+                    <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">We help your business grow</p>
+                    <p className="text-base text-gray-600 font-medium tracking-wide">
+                        Dicta sunt explicabo. Nemo
+                        enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
+                    </p>
 
                     <div className="flex gap-5 items-center">
-                        <FaShare className="text-3xl"/>
+                        <FaShare className="text-xl md:text-3xl"/>
                         <div className="flex flex-col gap-2">
-                            <p className="text-2xl text-black font-bold">Creative design</p>
-                            <span className="text-lg md:text-base text-gray-600 font-medium tracking-wide">Natus error sit voluptatem accus antium doloremque.</span>
+                            <p className="text-base md:text-2xl text-black font-bold">Creative design</p>
+                            <span className="text-base md:text-lg text-gray-600 font-medium tracking-wide">Natus error sit voluptatem accus antium doloremque.</span>
                         </div>
                     </div>
 
                     <div className="flex gap-5 items-center">
-                        <SiFarfetch className="text-3xl"/>
+                        <SiFarfetch className="text-xl md:text-3xl"/>
                         <div className="flex flex-col gap-2">
-                            <p className="text-2xl text-black font-bold">Endless possibilities</p>
-                            <span className="text-lg md:text-base text-gray-600 font-medium tracking-wide">Sit voluptatem accus antium doloremque laudan.</span>
+                            <p className="text-base md:text-2xl text-black font-bold">Endless possibilities</p>
+                            <span className="text-base md:text-lg text-gray-600 font-medium tracking-wide">Sit voluptatem accus antium doloremque laudan.</span>
                         </div>
                     </div>
 
@@ -195,7 +197,8 @@ const LandingPage = () => {
             </section>
 
             {/*The second section*/}
-            <section className="grid grid-cols-[1fr_1fr] md:grid-cols-4 gap-3 px-0 md:px-16 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
+            <section
+                className="grid grid-cols-[1fr_1fr] md:grid-cols-4 gap-3 px-0 md:px-16 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
                 {
                     lists.map((item, index) => (
                         <RandomList key={index} id={item.id} title={item.title} value={item.value}/>
