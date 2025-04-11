@@ -30,8 +30,16 @@ import {
     FaWallet
 } from "react-icons/fa6";
 import {SiFarfetch} from "react-icons/si";
-import TestimonialSlider from "../Slider.jsx";
+import TestimonialSlider from "../TestimonialSlider.jsx";
+import RandomSlider from "../RandomSlider.jsx";
+import ChartMag from '../../assets/chart-mag.png'
+import PcMag from '../../assets/pc-mag.png'
+import Folder from '../../assets/folder.png'
+import Chart from '../../assets/chart.png'
 
+const randomImages = [
+    ChartMag, Folder, PcMag, Chart
+];
 
 const lists = [
     {
@@ -245,7 +253,9 @@ const LandingPage = () => {
             </section>
 
             {/*The fourth section*/}
+            <RandomSlider randomImages={randomImages} />
 
+            {/*The fifth section*/}
             <section
                 className="flex flex-col md:flex-row px-0 md:px-16 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-3 md:gap-0 justify-between">
                 <p className="text-xl md:text-3xl lg:text-5xl text-blue-950 font-bold w-full md:w-[40%]">
@@ -272,7 +282,8 @@ const LandingPage = () => {
                 </form>
             </section>
 
-            {/*The fifth section*/}
+            {/*The sixth section*/}
+
             <TestimonialSlider testimonials={testimonials}/>
 
             {/*The seventh section*/}
