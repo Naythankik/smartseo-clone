@@ -96,8 +96,8 @@ const RandomList = ({ id, title, value}) => {
 
 const SponsorArticle = ({ icon: Icon, title }) => {
     return (
-        <div className="w-1/2">
-            <img src={Icon} alt={title} className="w-full"/>
+        <div className="w-full justify-center flex">
+            <img src={Icon} alt={title} className="w-2/3"/>
         </div>
     )
 }
@@ -280,17 +280,18 @@ const LandingPage = () => {
             </section>
 
             {/*The eight section*/}
-            <section className="hidden px-0 my-24 w-[95%] md:w-[85%] mx-auto justify-between items-center">
-                <SponsorArticle title="codan" icon={Codan}/>
-                <SponsorArticle title="wave" icon={Wave}/>
-                <SponsorArticle title="orca" icon={Orca}/>
-                <SponsorArticle title="minagod" icon={Minagod}/>
-                <SponsorArticle title="br" icon={Br}/>
-                <SponsorArticle title="arquivar" icon={Arquivar}/>
+            <section className="grid px-0 grid-cols-[1fr_1fr] md:grid-cols-6 my-16 md:my-24 w-[95%] md:w-[85%] mx-auto gap-3">
+                    <SponsorArticle title="codan" icon={Codan}/>
+                    <SponsorArticle title="wave" icon={Wave}/>
+                    <SponsorArticle title="orca" icon={Orca}/>
+                    <SponsorArticle title="minagod" icon={Minagod}/>
+                    <SponsorArticle title="br" icon={Br}/>
+                    <SponsorArticle title="arquivar" icon={Arquivar}/>
             </section>
 
             {/*The ninth section*/}
-            <section className="flex flex-col px-0 my-8 md:my-24 w-[90%] md:w-[85%] mx-auto gap-1 md:gap-8 lg:gap-12 justify-center items-center">
+            <section
+                className="flex flex-col px-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-1 md:gap-8 lg:gap-12 justify-center items-center">
                 <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">Our blog</p>
                 <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">Latest articles</p>
                 <div className="flex flex-nowrap overflow-x-scroll w-full gap-6 px-6 py-4" style={{scrollbarWidth: 'none'}}>{
