@@ -17,7 +17,12 @@ import GuyWorking from "../../assets/guy-working.jpg"
 import GuyOnPhone from "../../assets/guy-on-phone.jpg"
 import WorkingOffice from "../../assets/working-office.jpg"
 
+import John from "../../assets/john.png"
+import Sandy from "../../assets/sandy.jpg"
+import Paul from "../../assets/paul.jpg"
+
 import {
+    FaCaretLeft, FaCaretRight,
     FaCartShopping,
     FaFaceAngry,
     FaImage,
@@ -62,6 +67,12 @@ const articles = [
     { id: 8, title: 'media seo', description: "What’s trending on designers’ charts this spring", date: "Apr 21, 2020", comments: 0, image: GuyWorking },
 ]
 
+const testimonials = [
+    { id:1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', name: 'John Dou', level: 'expert', image: John },
+    { id:2, description: 'Adipiscing elit vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.', name: 'Sandy Williams', level: 'CEO, Business Co', image: Sandy},
+    { id:3, description: 'Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', name: 'Paul Freeman', level: 'Expert', image: Paul }
+];
+
 const SideLinks = ({ title, icon: Icon }) => {
     return (
         <Link
@@ -82,7 +93,7 @@ const RandomList = ({ id, title, value}) => {
     return (
         <div className={`cursor-text gap-4 flex justify-center w-full ${ id % 2 ? 'border-r md:border-0' : 'border-0'} ${ id !== 1 ? 'md:border-l' : 'md:border-0'} border-gray-200`}>
             <div className="relative w-fit">
-                <p className="text-[5rem] md:text-[10rem] font-extrabold text-red-400">{value}</p>
+                <p className="text-[5rem] md:text-[10rem] font-extrabold text-white">{value}</p>
                 <span
                     className="text-base md:text-2xl text-gray-900 font-bold absolute top-0 bottom-0 left-0 right-0 grid place-items-center">{title}
                 </span>
@@ -117,6 +128,22 @@ const ArticleArticles = ({ title, description, date, comments, image }) => {
     );
 };
 
+const TestimonialArticles = ({ id, name, description, level, image }) => {
+    return (
+        <article id={id}
+                 className="min-w-full transition-shadow duration-300 flex gap-5 items-center flex-col text-center">
+            {image && (
+                <img src={image} alt={name} className="rounded-full w-[100px] h-[100px]" />
+            )}
+            <p className="capitalize text-blue-950 text-xl font-semibold w-3/5">{description}</p>
+            <span className="text-cyan-400 text-8xl font-extrabold h-12">''</span>
+            <div className="flex flex-col gap-2">
+                <span className="capitalize text-blue-950 text-2xl font-semibold">{name}</span>
+                <span className="capitalize text-gray-300 text-xl font-medium">{level}</span>
+            </div>
+        </article>
+    );
+};
 
 const LandingPage = () => {
     return (
@@ -131,7 +158,7 @@ const LandingPage = () => {
             <div className="fixed left-10 bottom-24 gap-4 z-50 items-center">
                 <div
                     className="w-10 h-10 md:w-20 md:h-20 flex justify-center items-center text-white text-base md:text-3xl rounded-full bg-green-500">
-                    <FaMessage />
+                    <FaMessage/>
                 </div>
                 <button className="bg-white px-3 md:px-5 py-2 rounded-xl text-base md:text-xl">Presale Chat</button>
             </div>
@@ -159,10 +186,11 @@ const LandingPage = () => {
             </section>
 
             {/*The first section*/}
-            <section className="flex flex-col md:flex-row px-0 md:px-16 gap-8 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
+            <section
+                className="flex flex-col md:flex-row px-0 md:px-16 gap-8 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
                 <div className="w-full md:w-3/6 relative h-full">
                     <div className="flex justify-start w-full">
-                        <img src={HeadPhone} alt="headphone icon" className="w-2/3 md:w-auto" />
+                        <img src={HeadPhone} alt="headphone icon" className="w-2/3 md:w-auto"/>
                     </div>
                     <div className="flex w-full">
                         <img src={LaptopMan} alt="laptop man" className="-mt-60 ml-36 md:ml-40 w-2/3 md:w-auto"/>
@@ -170,8 +198,9 @@ const LandingPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-2 md:gap-4 w-full md:w-2/5">
-                    <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">creative agency</p>
-                    <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">We help your business grow</p>
+                    <p className="text-base md:text-lg text-blue-950 uppercase font-semibold tracking-widest">creative
+                        agency</p>
+                    <p className="text-2xl md:text-4xl lg:text-6xl text-blue-950 font-bold">We help your business grow</p>
                     <p className="text-base text-gray-600 font-medium tracking-wide">
                         Dicta sunt explicabo. Nemo
                         enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
@@ -180,7 +209,7 @@ const LandingPage = () => {
                     <div className="flex gap-5 items-center">
                         <FaShare className="text-xl md:text-3xl"/>
                         <div className="flex flex-col gap-2">
-                            <p className="text-base md:text-2xl text-black font-bold">Creative design</p>
+                            <p className="text-base md:text-2xl text-blue-950 font-bold">Creative design</p>
                             <span className="text-base md:text-lg text-gray-600 font-medium tracking-wide">Natus error sit voluptatem accus antium doloremque.</span>
                         </div>
                     </div>
@@ -188,7 +217,7 @@ const LandingPage = () => {
                     <div className="flex gap-5 items-center">
                         <SiFarfetch className="text-xl md:text-3xl"/>
                         <div className="flex flex-col gap-2">
-                            <p className="text-base md:text-2xl text-black font-bold">Endless possibilities</p>
+                            <p className="text-base md:text-2xl text-blue-950 font-bold">Endless possibilities</p>
                             <span className="text-base md:text-lg text-gray-600 font-medium tracking-wide">Sit voluptatem accus antium doloremque laudan.</span>
                         </div>
                     </div>
@@ -207,10 +236,13 @@ const LandingPage = () => {
             </section>
 
             {/*The third section*/}
-            <section className="flex flex-col md:flex-row md:px-20 gap-2 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between md:h-72">
+            <section
+                className="flex flex-col md:flex-row md:px-20 gap-2 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between md:h-72">
                 <div className="flex flex-col gap-1 md:gap-4 w-full md:w-2/5">
-                    <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">creative solutions</p>
-                    <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">We make unique & memorable brands</p>
+                    <p className="text-base md:text-lg text-blue-950 uppercase font-semibold tracking-widest">creative
+                        solutions</p>
+                    <p className="text-2xl md:text-4xl lg:text-6xl text-blue-950 font-bold">We make unique & memorable
+                        brands</p>
 
                 </div>
                 <div className="w-full md:w-3/6 flex flex-col justify-end gap-1 md:gap-3">
@@ -228,9 +260,33 @@ const LandingPage = () => {
 
             </section>
 
+            {/*The fourth section*/}
+            <section
+                className="relative flex flex-col px-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-1 md:gap-8 lg:gap-12 justify-center items-center">
+
+                <button className="bg-transparent border-2 border-gray-300 text-gray-600 w-12 h-12 rounded-full flex justify-center items-center text-2xl">
+                    <FaCaretLeft />
+                </button>
+
+                <div className="flex flex-nowrap overflow-x-scroll w-full bg-red-400 gap-6 px-6 py-4"
+                     style={{scrollbarWidth: 'none'}}>{
+                    testimonials.map((testimonial, index) => (
+                        <TestimonialArticles key={index} {...testimonial} />
+                    ))
+                }
+                </div>
+
+                <button className="bg-transparent border-2 border-gray-300 text-gray-600 w-12 h-12 rounded-full flex justify-center items-center text-2xl">
+                    <FaCaretRight/>
+                </button>
+
+            </section>
+
             {/*The fifth section*/}
-            <section className="flex flex-col md:flex-row px-0 md:px-16 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-3 md:gap-0 justify-between">
-                <p className="text-xl md:text-3xl lg:text-5xl text-black font-bold w-full md:w-[40%]">Subscribe for the exclusive updates!</p>
+            <section
+                className="flex flex-col md:flex-row px-0 md:px-16 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-3 md:gap-0 justify-between">
+                <p className="text-xl md:text-3xl lg:text-5xl text-blue-950 font-bold w-full md:w-[40%]">
+                    Subscribe for the exclusive updates!</p>
                 <form className="flex flex-col gap-1 md:gap-3 items-start w-full md:w-[58%]">
                     <div className="flex gap-2 md:gap-5 w-full">
                         <input type="email"
@@ -247,18 +303,21 @@ const LandingPage = () => {
                         <label className="text-gray-800 text-sm">I agree to the
                             <Link to="#"
                                   className="underline underline-offset-4"> Privacy
-                            Policy</Link>.
+                                Policy</Link>.
                         </label>
                     </div>
                 </form>
             </section>
 
             {/*The seventh section*/}
-            <section className="flex flex-col-reverse md:flex-row px-0 md:px-16 gap-8 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
+            <section
+                className="flex flex-col-reverse md:flex-row px-0 md:px-16 gap-8 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
 
                 <div className="flex flex-col gap-2 md:gap-4 w-full md:w-2/5">
-                    <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">Who We Are</p>
-                    <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">We provide best digital services</p>
+                    <p className="text-base md:text-lg text-blue-950 uppercase font-semibold tracking-widest">Who We
+                        Are</p>
+                    <p className="text-2xl md:text-4xl lg:text-6xl text-blue-950 font-bold">We provide best digital
+                        services</p>
                     <p className="text-base text-gray-600 font-medium tracking-wide">
                         Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
                         sed quia.
@@ -271,31 +330,33 @@ const LandingPage = () => {
 
                 <div className="w-full md:w-3/6 relative h-full">
                     <div className="flex justify-end w-full">
-                        <img src={WomanDrinking} alt="woman drinking" />
+                        <img src={WomanDrinking} alt="woman drinking"/>
                     </div>
                     <div className="flex w-full">
-                        <img src={Laptop} alt="laptop" className="-mt-80 ml-10 h-1/3 md:h-auto md:ml-28"/>
+                        <img src={Laptop} alt="laptop" className="-mt-80 ml-10 md:ml-28"/>
                     </div>
                 </div>
 
             </section>
 
             {/*The eight section*/}
-            <section className="grid px-0 grid-cols-[1fr_1fr] md:grid-cols-6 my-16 md:my-24 w-[95%] md:w-[85%] mx-auto gap-3">
-                    <SponsorArticle title="codan" icon={Codan}/>
-                    <SponsorArticle title="wave" icon={Wave}/>
-                    <SponsorArticle title="orca" icon={Orca}/>
-                    <SponsorArticle title="minagod" icon={Minagod}/>
-                    <SponsorArticle title="br" icon={Br}/>
-                    <SponsorArticle title="arquivar" icon={Arquivar}/>
+            <section
+                className="grid px-0 grid-cols-[1fr_1fr] md:grid-cols-6 my-16 md:my-24 w-[95%] md:w-[85%] mx-auto gap-3">
+                <SponsorArticle title="codan" icon={Codan}/>
+                <SponsorArticle title="wave" icon={Wave}/>
+                <SponsorArticle title="orca" icon={Orca}/>
+                <SponsorArticle title="minagod" icon={Minagod}/>
+                <SponsorArticle title="br" icon={Br}/>
+                <SponsorArticle title="arquivar" icon={Arquivar}/>
             </section>
 
             {/*The ninth section*/}
             <section
                 className="flex flex-col px-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-1 md:gap-8 lg:gap-12 justify-center items-center">
-                <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">Our blog</p>
-                <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">Latest articles</p>
-                <div className="flex flex-nowrap overflow-x-scroll w-full gap-6 px-6 py-4" style={{scrollbarWidth: 'none'}}>{
+                <p className="text-base md:text-lg text-blue-950 uppercase font-semibold tracking-widest">Our blog</p>
+                <p className="text-2xl md:text-4xl lg:text-6xl text-blue-950 font-bold">Latest articles</p>
+                <div className="flex flex-nowrap overflow-x-scroll w-full gap-6 px-6 py-4"
+                     style={{scrollbarWidth: 'none'}}>{
                     articles.map((article, index) => (
                         <ArticleArticles key={index} {...article} />
                     ))
