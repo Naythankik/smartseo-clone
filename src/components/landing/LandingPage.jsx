@@ -254,26 +254,27 @@ const LandingPage = () => {
             </section>
 
             {/*The seventh section*/}
-            <section className="hidden' px-16 my-24 w-full md:w-[85%] mx-auto justify-between items-center">
-                <div className="hidden flex-col gap-4 w-2/5">
-                    <p className="text-lg text-black uppercase font-semibold tracking-widest">Who We Are</p>
-                    <p className="text-6xl text-black font-bold">We provide best digital services</p>
+            <section className="flex flex-col-reverse md:flex-row px-0 md:px-16 gap-8 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
+
+                <div className="flex flex-col gap-2 md:gap-4 w-full md:w-2/5">
+                    <p className="text-base md:text-lg text-black uppercase font-semibold tracking-widest">Who We Are</p>
+                    <p className="text-2xl md:text-4xl lg:text-6xl text-black font-bold">We provide best digital services</p>
                     <p className="text-base text-gray-600 font-medium tracking-wide">
                         Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
                         sed quia.
                     </p>
                     <Link to="#"
-                          className="rounded-3xl text-white bg-cyan-400 py-4 w-fit px-12 font-semibold text-center">Discover
+                          className="rounded-xl md:rounded-3xl text-white bg-cyan-400 py-3 md:py-4 w-fit px-8 md:px-12 font-semibold text-center">Discover
                         Now</Link>
 
                 </div>
-                {/*When here, no display was set*/}
-                <div className="hidden w-3/6 relative h-full">
-                    <div className="flex justify-end">
-                        <img src={WomanDrinking} alt="woman drinking"/>
+
+                <div className="w-full md:w-3/6 relative h-full">
+                    <div className="flex justify-end w-full">
+                        <img src={WomanDrinking} alt="woman drinking" />
                     </div>
-                    <div className="flex justify-start">
-                        <img src={Laptop} alt="laptop" className="absolute top-32 left-28"/>
+                    <div className="flex w-full">
+                        <img src={Laptop} alt="laptop" className="-mt-96 ml-10 md:ml-28"/>
                     </div>
                 </div>
 
