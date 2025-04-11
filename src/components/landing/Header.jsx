@@ -73,10 +73,10 @@ const Header = () => {
                     `transition-all duration-700 ease-in-out bg-[#111922] h-[58vh] md:h-[52vh] z-50 fixed justify-between top-0 w-full left-0 items-center py-8 flex-col ${search ? 'translate-y-0 pointer-events-auto flex' : 'hidden -translate-y-full pointer-events-none'}`
                 }>
                 <div className=" flex justify-between w-[88%] items-center">
-                    <img src={HomeIcon} alt="Home icon" className="w-48"/>
+                    <img src={HomeIcon} alt="Home icon" className="w-28 md:w-48"/>
                     <button onClick={() => {
                         setSearch(!search)
-                    }} className="text-white font-medium text-3xl">X
+                    }} className="text-white font-medium text-2xl md:text-3xl">X
                     </button>
                 </div>
                 <form className="w-[90%] mb-16">
