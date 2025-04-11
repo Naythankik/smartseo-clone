@@ -183,7 +183,8 @@ const LandingPage = () => {
                 <div className="flex flex-col gap-2 md:gap-4 w-full md:w-2/5">
                     <p className="text-base md:text-lg text-blue-950 uppercase font-semibold tracking-widest">creative
                         agency</p>
-                    <p className="text-2xl md:text-4xl lg:text-6xl text-blue-950 font-bold">We help your business grow</p>
+                    <p className="text-2xl md:text-4xl lg:text-6xl text-blue-950 font-bold">We help your business
+                        grow</p>
                     <p className="text-base text-gray-600 font-medium tracking-wide">
                         Dicta sunt explicabo. Nemo
                         enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
@@ -245,9 +246,6 @@ const LandingPage = () => {
 
             {/*The fourth section*/}
 
-            <TestimonialSlider testimonials={ testimonials } />
-
-            {/*The fifth section*/}
             <section
                 className="flex flex-col md:flex-row px-0 md:px-16 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto gap-3 md:gap-0 justify-between">
                 <p className="text-xl md:text-3xl lg:text-5xl text-blue-950 font-bold w-full md:w-[40%]">
@@ -273,6 +271,9 @@ const LandingPage = () => {
                     </div>
                 </form>
             </section>
+
+            {/*The fifth section*/}
+            <TestimonialSlider testimonials={testimonials}/>
 
             {/*The seventh section*/}
             <section
