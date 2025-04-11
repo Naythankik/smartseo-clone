@@ -162,7 +162,7 @@ const LandingPage = () => {
             <section className="flex flex-col md:flex-row px-0 md:px-16 gap-8 md:gap-0 my-16 md:my-24 w-[90%] md:w-[85%] mx-auto justify-between items-center">
                 <div className="w-full md:w-3/6 relative h-full">
                     <div className="flex justify-start w-full">
-                        <img src={HeadPhone} alt="headphone icon"/>
+                        <img src={HeadPhone} alt="headphone icon" className="w-2/3 md:w-auto" />
                     </div>
                     <div className="flex w-full">
                         <img src={LaptopMan} alt="laptop man" className="-mt-60 ml-36 md:ml-40 w-2/3 md:w-auto"/>
@@ -271,7 +271,7 @@ const LandingPage = () => {
 
                 <div className="w-full md:w-3/6 relative h-full">
                     <div className="flex justify-end w-full">
-                        <img src={WomanDrinking} alt="woman drinking" />
+                        <img src={WomanDrinking} alt="woman drinking" className="w-2/4 md:w-auto"/>
                     </div>
                     <div className="flex w-full">
                         <img src={Laptop} alt="laptop" className="-mt-96 ml-10 md:ml-28"/>
