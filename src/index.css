@@ -9,6 +9,7 @@
 body{
   background: #fff;
   font-family: 'Quicksand', sans-serif;
+  min-width: 336px;
 }
 
 @tailwind base;

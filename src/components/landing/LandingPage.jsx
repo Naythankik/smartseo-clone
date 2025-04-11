@@ -274,7 +274,7 @@ const LandingPage = () => {
                         <img src={WomanDrinking} alt="woman drinking" />
                     </div>
                     <div className="flex w-full">
-                        <img src={Laptop} alt="laptop" className="-mt-80 ml-10 md:ml-28"/>
+                        <img src={Laptop} alt="laptop" className="-mt-80 ml-10 h-1/3 md:h-auto md:ml-28"/>
                     </div>
                 </div>
 
